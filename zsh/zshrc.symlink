@@ -2,7 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Development
+export PROJECTS=~/07studio
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
@@ -14,9 +14,22 @@ then
   source ~/.localrc
 fi
 
+# Adding some customizations
+# Nice resource at http://grml.org/zsh/zsh-lovers.html
+
+# fuzzy matching :D!
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+
+
+
+
+
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.sh) source $config_file
+source "`brew --prefix`/etc/grc.bashrc"
