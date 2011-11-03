@@ -1,6 +1,9 @@
 # holman does dotfiles
+# bwl also has dotfiles
 
 ## dotfiles
+
+System Setup: https://gist.github.com/1212463
 
 Your dotfiles are how you personalize your system. These are mine. The very
 prejudiced mix: OS X, zsh, Ruby, Rails, git, homebrew, rvm, vim. If you
