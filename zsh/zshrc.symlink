@@ -22,9 +22,7 @@ zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
-
-
-
+export GEM_HOME='/usr/local/Cellar/gems/1.8'
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
